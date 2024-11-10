@@ -1,7 +1,7 @@
 async function main() {
-    const IdentityManager = await ethers.deployContract("IdentityManager");
-    await IdentityManager.waitForDeployment();
-    console.log("Contrato implantado em: ", IdentityManager.target);
+    const RatedElection = await ethers.deployContract(process.env.CONTRACT_NAME);
+    await RatedElection.waitForDeployment();
+    console.log("Contrato implantado em: ", RatedElection.target);
 }
 
 main()
